@@ -1,5 +1,9 @@
 # Atividade 4 - Desenvolvendo LP Completa:
 
+### Deploy do projeto
+
+https://cakehoney.netlify.app
+
 ## Cakes Honey. 🍰
 
 Este projeto é uma landing page chamada Cakes Honey, desenvolvida como parte da Atividade 4 do meu curso. 
