@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nome": "Felipe Souza",
+        "foto": "https://images.pexels.com/photos/7561914/pexels-photo-7561914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "texto": "Serviço excelente! Recomendo a todos."
+    },
+    {
+        "id": 2,
+        "nome": "Maria Nunes",
+        "foto": "https://images.pexels.com/photos/6785039/pexels-photo-6785039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "texto": "Fiquei muito satisfeita com o resultado da minha festa."
+    },
+    {
+        "id": 3,
+        "nome": "Bruna Judith",
+        "foto": "https://images.pexels.com/photos/29004177/pexels-photo-29004177/free-photo-of-jovem-mulher-em-regata-branca-retrato-ao-ar-livre.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "texto": "A decoração ficou incrível, exatamente como imaginei."
+    },
+    {
+        "id": 4,
+        "nome": "Ana Claudia Morais",
+        "foto": "https://images.pexels.com/photos/1918084/pexels-photo-1918084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "texto": "O buffet foi maravilhoso, todos elogiaram."
+    }
+    
+]

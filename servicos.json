@@ -1,0 +1,32 @@
+{
+    "servicos": [
+        {
+            "id": 1,
+            "titulo": "Bolos Personalizado",
+            "descricao": "Bolos personalizados de acordo com o tema da festa, feitos com ingredientes frescos.",
+            "preco": "R$ 150,00",
+            "foto": "https://images.pexels.com/photos/28587502/pexels-photo-28587502/free-photo-of-bolo-de-aniversario-elegante-com-cobertura-rosa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 2,
+            "titulo": "Decoração de Festas",
+            "descricao": "Serviços de decoração para eventos, incluindo balões, mesas e temas personalizados.",
+            "preco": "R$ 500,00",
+            "foto": "https://images.pexels.com/photos/17057033/pexels-photo-17057033/free-photo-of-restaurante-arvore-mesas-cadeiras.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 3,
+            "titulo": "Serviço de Buffet",
+            "descricao": "Buffet completo para festas, com uma variedade de pratos e opções de sobremesas.",
+            "preco": "R$ 1000,00",
+            "foto": "https://images.pexels.com/photos/25916387/pexels-photo-25916387/free-photo-of-sobremesa-doce-bala-agradavel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        },
+        {
+            "id": 4,
+            "titulo": "Fotografia de Eventos",
+            "descricao": "Fotografia profissional capturando melhores momentos do seu evento. Fotos de  alta qualidade.",
+            "preco": "R$ 800,00",
+            "foto": "https://images.pexels.com/photos/18121561/pexels-photo-18121561/free-photo-of-casamento.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+    ]
+}
