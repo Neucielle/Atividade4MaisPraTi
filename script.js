@@ -60,32 +60,49 @@ document.addEventListener('DOMContentLoaded', function () {
             container.innerHTML = '<p>Desculpe, não conseguimos carregar os testemunhos no momento.</p>';
         });
 
-    const form = document.getElementById('form-contato');
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
 
-        const nome = document.getElementById('nome').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const mensagem = document.getElementById('mensagem').value.trim();
+emailjs.init('vAkLpwCSKcKibEIqn');
 
-        if (!nome || !email || !mensagem) {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-            return;
-        }
+const form = document.getElementById('form-contato');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        if (!validateEmail(email)) {
-            alert('Por favor, insira um email válido.');
-            return;
-        }
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
 
-        emailjs.send('service_l6fge72', 'template_846d1zj', {
-            nome: nome,
-            email: email,
-            mensagem: mensagem
-        })
-        .then(() => alert('Mensagem enviada com sucesso!'))
-        .catch(() => alert('Erro ao enviar a mensagem.'));
+
+    if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Por favor, insira um email válido.');
+        return;
+    }
+
+    // Envio do e-mail
+    emailjs.send('service_l6fge72', 'template_846d1zj', {
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+    })
+    .then(() => {
+        alert('Mensagem enviada com sucesso!');
+        form.reset();
+    })
+    .catch(() => {
+        alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
     });
+});
+
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
 
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
