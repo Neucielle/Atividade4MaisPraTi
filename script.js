@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Inicializa o Swiper
     var swiper = new Swiper('.mySwiper', {
         slidesPerView: 1,
         loop: true,
@@ -15,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    // Inicializa o AOS (Animate On Scroll)
     AOS.init();
 
+    // Carrega serviços do JSON
     fetch('servicos.json')
         .then(response => response.json())
         .then(data => {
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             container.innerHTML = '<p>Desculpe, não conseguimos carregar os serviços no momento.</p>';
         });
 
+    // Carrega testemunhos do JSON
     fetch('testemunhos.json')
         .then(response => response.json())
         .then(data => {
@@ -58,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             container.innerHTML = '<p>Desculpe, não conseguimos carregar os testemunhos no momento.</p>';
         });
 
+    // Inicializa o EmailJS
     emailjs.init('vAkLpwCSKcKibEIqn');
 
     const form = document.getElementById('form-contato');
@@ -78,18 +83,14 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        emailjs.send('service_l6fge72', 'template_846d1zj', {
-            nome: nome,
-            email: email,
-            mensagem: mensagem
-        })
-        .then(() => {
-            alert('Mensagem enviada com sucesso!');
-            form.reset();
-        })
-        .catch(() => {
-            alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
-        });
+        // Envia o email usando o EmailJS
+        emailjs.sendForm('service_l6fge72', 'template_846d1zj', this)
+            .then(function (response) {
+                alert('Mensagem enviada com sucesso!');
+                form.reset();
+            }, function (error) {
+                alert('Falha no envio da mensagem: ' + JSON.stringify(error));
+            });
     });
 
     function validateEmail(email) {
@@ -97,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return re.test(String(email).toLowerCase());
     }
 
+    // Menu Hamburguer
     const menuHamburguer = document.getElementById('menu-hamburguer');
     const menu = document.getElementById('menu');
-    
+
     menuHamburguer.addEventListener('click', function () {
         menu.classList.toggle('active');
     });
-    
 });
